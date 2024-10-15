@@ -7,8 +7,8 @@ import {
 
 function FooterSection() {
   return (
-    <div >
-      <footer className=" bg-blue-50 mt-[215px] ">
+    <div>
+      <footer className=" bg-blue-50 mt-[215px] p-10 ">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
@@ -20,13 +20,21 @@ function FooterSection() {
               </p>
 
               <div className="flex  sm:justify-start sm:mt-0">
-                <FacebookLogo size={20} color="#374151" weight="fill" className="mt-2 " />
-                <XLogo size={20} color="#374151" weight="fill"  className="mt-2 ml-1.5"/>
-                <LinkedinLogo size={20} color="#374151" weight="fill" className="mt-2 ml-1.5" />
+                <div className="flex items-center mt-2">
+                  <div className="flex items-center justify-center border-2 border-white rounded-full p-1">
+                    <FacebookLogo size={20} color="#374151" weight="fill" />
+                  </div>
+                  <div className="flex items-center justify-center border-2 border-white rounded-full p-1 ml-1.5">
+                    <XLogo size={20} color="#374151" weight="fill" />
+                  </div>
+                  <div className="flex items-center justify-center border-2 border-white rounded-full p-1 ml-1.5">
+                    <LinkedinLogo size={20} color="#374151" weight="fill" />
+                  </div>
+                </div>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-              <div>
+              <div className="mr-5">
                 <h2 className="mb-6 text-sm font-semibold text-blue-600 uppercase dark:text-blue-600">
                   COMPANY
                 </h2>
@@ -36,52 +44,26 @@ function FooterSection() {
                   <div className="mb-4">Contact</div>
                 </div>
               </div>
-              <div>
+              <div className="ml-5">
                 <h2 className="mb-6 text-sm font-semibold text-blue-600 uppercase ark:text-blue-600">
                   PRODUCT
                 </h2>
                 <div className="text-gray-500 dark:text-gray-400 font-medium">
-                  <div className="mb-4">
-                    
-                  Features
-                   
-                  </div>
-                  <div className="mb-4">
-                   
-                  Pricing
-                   
-                  </div>
-                  <div className="mb-4">
-                   
-                  FAQs
-                   
-                  </div>
-                  <div className="mb-4">
-                   
-                  Demo
-                   
-                  </div>
+                  <div className="mb-4">Features</div>
+                  <div className="mb-4">Pricing</div>
+                  <div className="mb-4">FAQs</div>
+                  <div className="mb-4">Demo</div>
                 </div>
               </div>
-              <div>
+              <div className="ml-5">
                 <h2 className="mb-6 text-sm font-semibold text-blue-600 uppercase ark:text-blue-600">
-                  
                   RESOURCES
                 </h2>
                 <div className="text-gray-500 dark:text-gray-400 font-medium">
-                  <div className="mb-4">
-                    Help Center
-                    
-                  </div>
-                  <div className="mb-4">
-                  User Guides
-                  </div>
-                  <div className="mb-4">
-                  Tutorials
-                  </div>
-                  <div className="mb-4">
-                  Blogs
-                  </div>
+                  <div className="mb-4">Help Center</div>
+                  <div className="mb-4">User Guides</div>
+                  <div className="mb-4">Tutorials</div>
+                  <div className="mb-4">Blogs</div>
                 </div>
               </div>
             </div>
