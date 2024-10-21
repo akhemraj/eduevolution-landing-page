@@ -1,3 +1,4 @@
+import DemoSection from "@/components/sections/DemoSection";
 import FeatureSection from "@/components/sections/FeatureSection";
 import FooterSection from "@/components/sections/FooterSection";
 import HeroSection from "@/components/sections/HeroSection";
@@ -12,6 +13,7 @@ export default function Home() {
     <HeroSection/>
     <FeatureSection/>
     <HowItWorksSection/>
+    <DemoSection/>
     <ResourcesSection/>
     <FooterSection/>
     </>
