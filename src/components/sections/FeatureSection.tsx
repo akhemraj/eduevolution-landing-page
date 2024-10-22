@@ -10,7 +10,10 @@ import {
 function FeatureSection() {
   return (
     <>
-      <div className="flex justify-center items-center mt-36 md:mt-28 " id="Features">
+      <div
+        className="flex justify-center items-center mt-36 md:mt-28 "
+        id="Features"
+      >
         <div className="text-center mt-4 mb-3 bg-[#E1EFFE] font-semibold text-blue-600 focus:outline-none  rounded-full text-xs sm:text-sm px-2.5 py-1.5 inline-flex items-center dark:focus:ring-[#3b5998]/55">
           <SquaresFour
             size={25}
@@ -20,8 +23,6 @@ function FeatureSection() {
           />
           Key Features
         </div>
-       
-
       </div>
       <h1 className="text-center text-2xl sm:text-4xl font-semibold mb-3">
         Grading reimagined <span className="text-blue-600">.</span>
@@ -47,7 +48,7 @@ function FeatureSection() {
 
           {/* Card 2 */}
           <div className="w-60   sm:w-72 md:w-70 md:h-64 p-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <div className="text-gray-500 dark:text-gray-400 mb-3 flex justify-center sm:justify-start ">
+            <div className="text-gray-500 dark:text-gray-400 mb-3 flex justify-center sm:justify-start ">
               <div className="flex items-center justify-center w-10 h-10 bg-yellow-50 rounded-full">
                 <LightbulbFilament size={23} color="#E3A008" />
               </div>
@@ -63,7 +64,7 @@ function FeatureSection() {
 
           {/* Card 3 */}
           <div className="w-60   sm:w-72 md:w-70 md:h-64 p-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <div className="text-gray-500 dark:text-gray-400 mb-3 flex justify-center sm:justify-start ">
+            <div className="text-gray-500 dark:text-gray-400 mb-3 flex justify-center sm:justify-start ">
               <div className="flex items-center justify-center w-10 h-10 bg-yellow-50 rounded-full">
                 <Scales size={23} color="#E5C100" />
               </div>
@@ -79,7 +80,7 @@ function FeatureSection() {
 
           {/* Card 4 */}
           <div className="w-60   sm:w-72 md:w-70 md:h-64 p-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <div className="text-gray-500 dark:text-gray-400 mb-3 flex justify-center sm:justify-start ">
+            <div className="text-gray-500 dark:text-gray-400 mb-3 flex justify-center sm:justify-start ">
               <div className="flex items-center justify-center w-10 h-10 bg-green-50 rounded-full">
                 <UsersThree size={23} color="#057A55" />
               </div>

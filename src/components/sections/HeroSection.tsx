@@ -19,7 +19,7 @@ function HeroSection() {
   };
 
   const handleLinkClick = () => {
-    setIsOpen(false); // Close the navbar on link click
+    setIsOpen(false);
   };
 
   return (
@@ -40,9 +40,8 @@ function HeroSection() {
                   className="mr-1"
                   priority
                 />{" "}
-               <span className="text-blue-600">Edu</span>Sage 
+                <span className="text-blue-600">Edu</span>Sage
               </span>
-              
             </span>
           </Link>
 
@@ -99,7 +98,7 @@ function HeroSection() {
               >
                 Resources
               </Link>
-              
+
               <Button
                 variant="secondary"
                 className="text-white bg-blue-600 hover:bg-blue-800"
@@ -121,22 +120,20 @@ function HeroSection() {
               isOpen ? "transform-none" : "transform -translate-y-full"
             }`}
           >
-            {/* EduSageAI Heading and Cancel Button in One Row */}
             <div className="flex justify-between items-center">
-            <span className="self-center text-xl sm:text-2xl font-semibold whitespace-nowrap dark:text-white">
-              <span className=" text-base flex">
-                <Image
-                  src="/images/logo.svg"
-                  alt="Image not Found"
-                  width={20}
-                  height={20}
-                  className="mr-1"
-                  priority
-                />{" "}
-               <span className="text-blue-600">Edu</span>Sage 
+              <span className="self-center text-xl sm:text-2xl font-semibold whitespace-nowrap dark:text-white">
+                <span className=" text-base flex">
+                  <Image
+                    src="/images/logo.svg"
+                    alt="Image not Found"
+                    width={20}
+                    height={20}
+                    className="mr-1"
+                    priority
+                  />{" "}
+                  <span className="text-blue-600">Edu</span>Sage
+                </span>
               </span>
-              
-            </span>
 
               <button
                 type="button"

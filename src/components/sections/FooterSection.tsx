@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FacebookLogo,
-  LinkedinLogo,
-  XLogo,
-  EnvelopeSimple,
-} from "@phosphor-icons/react/dist/ssr";
+import { LinkedinLogo, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -37,12 +32,6 @@ function FooterSection() {
 
               <div className="flex  sm:justify-start sm:mt-0">
                 <div className="flex items-center mt-2">
-                  {/* <div className="flex items-center justify-center border-2 border-white rounded-full p-1">
-                    <FacebookLogo size={20} color="#374151" weight="fill" />
-                  </div>
-                  <div className="flex items-center justify-center border-2 border-white rounded-full p-1 ml-1.5">
-                    <XLogo size={20} color="#374151" weight="fill" />
-                  </div> */}
                   <div className="flex items-center justify-center border-2 border-white rounded-full p-1 ml-1.5">
                     <LinkedinLogo size={20} color="#374151" weight="fill" />
                   </div>
@@ -66,11 +55,7 @@ function FooterSection() {
           </div>
           <hr className="my-6 border-white sm:mx-auto dark:border-white lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-center">
-            <span className="hidden md:block  text-xs sm:text-sm text-gray-500 sm:text-center dark:text-gray-400">
-              © Copyright 2024, All rights reserved by EduSage.
-            </span>
-            {/* moblie view */}
-            <span className=" block md:hidden text-[8px] text-center text-gray-500 sm:text-center dark:text-gray-400">
+            <span className=" text-[8px] md:text-xs sm:text-sm text-gray-500 text-center dark:text-gray-400">
               © Copyright 2024, All rights reserved by EduSage.
             </span>
           </div>

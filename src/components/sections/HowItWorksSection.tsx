@@ -13,8 +13,8 @@ function HowItWorksSection() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-20 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 ">
           <div className="lg:pr-8 lg:pt-4 ">
             <div className="lg:max-w-lg">
-              <div className="w-full flex justify-center  ">
-                <div className="text-center mt-4 mb-3 bg-[#E1EFFE] font-semibold text-blue-600 focus:outline-none font-medium rounded-full text-sm px-2 py-1.5 inline-flex items-center dark:focus:ring-[#3b5998]/55 mx-auto">
+              <div className="w-full flex  justify-center md:justify-start ">
+                <div className="text-center mt-4 mb-3 bg-[#E1EFFE] font-semibold text-blue-600 focus:outline-none  rounded-full text-sm px-2 py-1.5 inline-flex items-center dark:focus:ring-[#3b5998]/55 ">
                   <SealQuestion
                     size={25}
                     color="#1C64F2"
@@ -24,38 +24,22 @@ function HowItWorksSection() {
                   How it works
                 </div>
               </div>
-              {/* latop screen heading */}
-<div className="hidden md:block">
+              <div>
+                <p className="mt-2 text-2xl font-bold tracking-tight text-gray-800 md:text-4xl  text-center md:text-left">
+                  <span className="md:leading-relaxed">
+                    Create Exams and Start
+                  </span>{" "}
+                  Grading with AI in Just
+                  <span className="block text-blue-600 md:leading-relaxed">
+                    3 Simple Steps
+                  </span>
+                </p>
 
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl leading-loose text-center md:text-left">
-                <span className="leading-relaxed">Create Exams and Start</span>{" "}
-                Grading with AI in Just
-                <span className="block text-blue-600 leading-relaxed">
-                  3 Simple Steps
-                </span>
-              </p>
-
-              <p className="mt-2 text-lg leading-8 text-gray-700 hidden md:block">
-                Upload your exam sheets, let our AI analyze the answers, and get
-                instant, bias-free results—all with just a few clicks.
-              </p>
-</div>
-{/* mobile view heading  */}
-<div className="flex md:hidden ">
-
-<p className="mt-2 justify-center ml-0 text-2xl font-bold  text-gray-800 text-center ">
-                
-                <span className="block  leading-relaxed">
-                Create Exams and Start Grading with AI in Just 
-                </span>
-                <span className="text-blue-600">
-                3 Simple Steps
-                </span>
-              </p>
-
-</div>
-
-
+                <p className="mt-2 text-lg leading-8 text-gray-700 hidden md:block">
+                  Upload your exam sheets, let our AI analyze the answers, and
+                  get instant, bias-free results—all with just a few clicks.
+                </p>
+              </div>
             </div>
           </div>
 
