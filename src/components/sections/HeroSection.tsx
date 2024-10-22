@@ -215,7 +215,7 @@ function HeroSection() {
               See it in Action
               <Lightning
                 size={16}
-                className=" pml-2 sm:ml-3"
+                className=" ml-2  md:ml-3"
                 color="#e1dbdb"
                 weight="fill"
               />
