@@ -1,63 +1,56 @@
 import React from "react";
-import { LinkedinLogo, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
+import { EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 function FooterSection() {
   return (
     <div>
-      <footer className=" bg-blue-50 mt-[215px] p-10 ">
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <footer className=" bg-blue-50 mt-[240px]">
+        <div className="mx-auto w-full max-w-screen-xl px-[40px] py-[50px] md:px-0">
           <div className="md:flex md:justify-between">
-            <div className="mb-6 md:mb-0">
+            <div className="mb-28 md:mb-0">
               <span className="self-center text-2xl font-semibold whitespace-nowrap ark:text-blue-600">
                 <span className="self-center text-xl sm:text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  <span className=" text-2xl flex">
+                  <div className="flex gap-2 md:gap-4 items-center">
                     <Image
-                      src="/images/logo.svg"
-                      alt="Image not Found"
-                      width={20}
-                      height={20}
-                      className="mr-1"
+                      src="/images/EduSage32x32.svg"
+                      alt="Brand-icon"
+                      width={46}
+                      height={46}
+                      className="w-10 h-10 md:w-[46px] md:h-[46px]"
                       priority
-                    />{" "}
-                    <span className="text-blue-600">Edu</span>Sage
-                  </span>
+                    />
+                    <div className="flex flex-col">
+                      <h2 className="text-[22px] md:text-2xl text-blue-600 font-bold">
+                        EduSage<span className="text-gray-800">AI</span>
+                      </h2>
+                      <p className="text-xs md:text-sm text-gray-700 font-normal">
+                        Revolutionize the way you grade exams
+                      </p>
+                    </div>
+                  </div>
                 </span>
               </span>
-              <p className="text-xs self-center whitespace-nowrap mt-2">
-                Revolutionize the way you grade with <br />
-                AI Precision
-              </p>
-
-              <div className="flex  sm:justify-start sm:mt-0">
-                <div className="flex items-center mt-2">
-                  <div className="flex items-center justify-center border-2 border-white rounded-full p-1 ml-1.5">
-                    <LinkedinLogo size={20} color="#374151" weight="fill" />
-                  </div>
-                </div>
-              </div>
             </div>
-            <div className="grid grid-cols-1  ">
-              <div className=" flex ">
+            <div className="grid grid-cols-1">
+              <div className="flex justify-center md:justify-start">
                 <Link href="mailto:contact@edusageai.com">
-                  <button className=" flex text-xs md:text-base bg-transparent mt-auto mb-auto  hover:bg-blue text-blue-600 font-semibold  py-2 px-4 border border-blue-600 hover:border-blue rounded">
-                    <EnvelopeSimple
-                      size={18}
-                      color="#1C64F2"
-                      className="mt-auto mb-auto mr-2"
-                    />
+                  <Button className="bg-transparent text-blue-600 border-2 border-blue-600 rounded-md gap-[10px] px-[30px] md:px-[18px] py-[24px] hover:bg-transparent">
+                    <EnvelopeSimple size={20} color="#1C64F2" />
                     contact@edusageai.com
-                  </button>
+                  </Button>
                 </Link>
               </div>
             </div>
           </div>
           <hr className="my-6 border-white sm:mx-auto dark:border-white lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-center">
-            <span className=" text-[8px] md:text-xs sm:text-sm text-gray-500 text-center dark:text-gray-400">
-              © Copyright 2024, All rights reserved by EduSage.
-            </span>
+            <p className="text-[10px] md:text-xs sm:text-sm text-gray-500 text-center dark:text-gray-400">
+              © Copyright {new Date().getFullYear()}, All rights reserved by
+              EduSageAI
+            </p>
           </div>
         </div>
       </footer>

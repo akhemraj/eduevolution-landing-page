@@ -1,25 +1,11 @@
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
 import "./globals.css";
-import {Plus_Jakarta_Sans} from "next/font/google"
+import { Plus_Jakarta_Sans } from "next/font/google";
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
-
-const PlusJakartaSans =  Plus_Jakarta_Sans({
-  weight:["200","300","400","500","600","700"],
-  subsets:["latin"]
-
-})
-
+const PlusJakartaSans = Plus_Jakarta_Sans({
+  weight: ["200", "300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "EduSageAI",
@@ -32,14 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
-      <link rel="icon" href="/favicon.ico" sizes="any" />
-
+        <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
       </head>
-      <body
-        className={`${PlusJakartaSans.className} antialiased`}
-      >
+      <body className={`${PlusJakartaSans.className} antialiased`}>
         {children}
       </body>
     </html>

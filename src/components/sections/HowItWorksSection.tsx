@@ -8,43 +8,37 @@ import {
 
 function HowItWorksSection() {
   return (
-    <div id="How-it-works" className="mt-40">
+    <div id="How-it-works" className="mt-32 md:mt-48">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-20 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 ">
+        <div className="mx-auto grid max-w-2xl lg:max-w-none grid-cols-1 lg:grid-cols-2 gap-x-32 gap-y-16 sm:gap-y-20 lg:mx-0   ">
           <div className="lg:pr-8 lg:pt-4 ">
             <div className="lg:max-w-lg">
-              <div className="w-full flex  justify-center md:justify-start ">
-                <div className="text-center mt-4 mb-3 bg-[#E1EFFE] font-semibold text-blue-600 focus:outline-none  rounded-full text-sm px-2 py-1.5 inline-flex items-center dark:focus:ring-[#3b5998]/55 ">
-                  <SealQuestion
-                    size={25}
-                    color="#1C64F2"
-                    weight="fill"
-                    className="mr-2"
-                  />
+              <div className="w-full flex justify-center md:justify-start ">
+                <div className="text-center bg-[#E1EFFE] font-semibold text-blue-600 focus:outline-none rounded-full text-xs sm:text-sm px-[14px] py-2 inline-flex items-center gap-2">
+                  <SealQuestion size={22} color="#1C64F2" weight="fill" />
                   How it works
                 </div>
               </div>
               <div>
-                <p className="mt-2 text-2xl font-bold tracking-tight text-gray-800 md:text-4xl  text-center md:text-left">
+                <p className="mt-[15px] md:mt-5  text-2xl font-bold tracking-tight text-gray-800 md:text-4xl  text-center md:text-left">
                   <span className="md:leading-relaxed">
-                    Create Exams and Start
+                    Create exams and start
                   </span>{" "}
-                  Grading with AI in Just
+                  grading with AI in just
                   <span className="block text-blue-600 md:leading-relaxed">
-                    3 Simple Steps
+                    3 simple steps
                   </span>
                 </p>
 
-                <p className="mt-2 text-lg leading-8 text-gray-700 hidden md:block">
-                  Upload your exam sheets, let our AI analyze the answers, and
-                  get instant, bias-free results—all with just a few clicks.
+                <p className="max-w-[480px] mt-[10px] text-lg font-medium leading-7 text-gray-700 hidden md:block">
+                  Let AI analyze your answers and get Instant, Bias-free
+                  results—all with just a few clicks
                 </p>
               </div>
             </div>
           </div>
 
           {/* stepper started */}
-
           <div className="container mx-auto flex flex-wrap">
             <div className="flex flex-wrap w-full">
               <div className=" md:pr-10 md:py-6">
@@ -56,10 +50,10 @@ function HowItWorksSection() {
                     <PencilSimple size={22} color="#1C64F2" />
                   </div>
                   <div className="flex-grow pl-4">
-                    <h2 className=" title-font text-base	 text-blue-600 font-bold mb-1 tracking-wider">
+                    <h2 className="title-font text-base md:text-xl text-blue-600 font-bold mb-1">
                       1. Setup Exam
                     </h2>
-                    <p className="leading-relaxed">
+                    <p className="text-xs md:text-base">
                       Create or upload your question paper along with model
                       answers to guide the AI for accurate grading.
                     </p>
@@ -73,12 +67,12 @@ function HowItWorksSection() {
                     <FileArrowUp size={22} color="#1C64F2" />
                   </div>
                   <div className="flex-grow pl-4">
-                    <h2 className="text-blue-600 font-bold title-font text-base	  mb-1 tracking-wider">
+                    <h2 className="title-font text-base md:text-xl text-blue-600 font-bold mb-1">
                       2. Upload Submissions
                     </h2>
-                    <p className="leading-relaxed">
-                      Upload scanned answer sheets or typed responses for AI
-                      analysis and comparison to model answers.
+                    <p className="text-xs md:text-base">
+                      Upload handwritten or digital answer sheets for AI
+                      evaluation.
                     </p>
                   </div>
                 </div>
@@ -87,10 +81,10 @@ function HowItWorksSection() {
                     <Exam size={22} color="#1C64F2" />
                   </div>
                   <div className="flex-grow pl-4">
-                    <h2 className="text-blue-600 font-bold title-font text-base	  mb-1 tracking-wider">
+                    <h2 className="title-font text-base md:text-xl text-blue-600 font-bold mb-1">
                       3. Get Instant Results
                     </h2>
-                    <p className="leading-relaxed">
+                    <p className="text-xs md:text-base">
                       Receive detailed, bias-free grading results instantly with
                       AI-driven accuracy and feedback.
                     </p>
