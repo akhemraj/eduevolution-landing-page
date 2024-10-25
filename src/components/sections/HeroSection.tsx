@@ -40,7 +40,7 @@ function HeroSection() {
                 priority
                 className="w-6 h-6 md:w-9 md:h-9"
               />
-              <span className="md:text-lg text-blue-600 font-bold">
+              <span className="md:text-2xl text-blue-600 font-bold">
                 EduSage<span className="text-gray-800">AI</span>
               </span>
             </Link>
@@ -57,7 +57,7 @@ function HeroSection() {
 
             {/* Desktop Navbar */}
             <div className="hidden md:flex">
-              <div className="text-[15px] font-semibold flex gap-5">
+              <div className="text-base font-semibold flex gap-5">
                 <Link
                   href="#Features"
                   className="py-2 text-gray-600 hover:text-blue-600"
@@ -210,41 +210,41 @@ function HeroSection() {
             <div className="mt-10 max-w-md space-y-1 text-gray-800">
               <div className="flex items-center gap-[10px]">
                 <Check
-                  className="w-[18px] h-[18px] lg:w-5 lg:h-5"
+                  className="w-[18px] h-[18px] lg:w-6 lg:h-6"
                   color="#1c64f2"
                   weight="regular"
                 />
-                <span className="font-medium text-sm md:text-base">
+                <span className="font-medium text-sm md:text-lg">
                   Quick and accurate grading
                 </span>
               </div>
               <div className="flex items-center gap-[10px]">
                 <Check
-                  className="w-[18px] h-[18px] lg:w-5 lg:h-5"
+                  className="w-[18px] h-[18px] lg:w-6 lg:h-6"
                   color="#1c64f2"
                   weight="regular"
                 />
-                <span className="font-medium text-sm md:text-base">
+                <span className="font-medium text-sm md:text-lg">
                   Fairness in assessment
                 </span>
               </div>
               <div className="flex items-center gap-[10px]">
                 <Check
-                  className="w-[18px] h-[18px] lg:w-5 lg:h-5"
+                  className="w-[18px] h-[18px] lg:w-6 lg:h-6"
                   color="#1c64f2"
                   weight="regular"
                 />
-                <span className="font-medium text-sm md:text-base">
+                <span className="font-medium text-sm md:text-lg">
                   Concise student reports
                 </span>
               </div>
               <div className="flex items-center gap-[10px]">
                 <Check
-                  className="w-[18px] h-[18px] lg:w-5 lg:h-5"
+                  className="w-[18px] h-[18px] lg:w-6 lg:h-6"
                   color="#1c64f2"
                   weight="regular"
                 />
-                <span className="font-medium text-sm md:text-base">
+                <span className="font-medium text-sm md:text-lg">
                   AI plagiarism checker
                 </span>
               </div>

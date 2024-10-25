@@ -53,7 +53,7 @@ function HowItWorksSection() {
                     <h2 className="title-font text-base md:text-xl text-blue-600 font-bold mb-1">
                       1. Setup Exam
                     </h2>
-                    <p className="text-xs md:text-base">
+                    <p className="text-xs md:text-lg">
                       Create or upload your question paper along with model
                       answers to guide the AI for accurate grading.
                     </p>
@@ -70,7 +70,7 @@ function HowItWorksSection() {
                     <h2 className="title-font text-base md:text-xl text-blue-600 font-bold mb-1">
                       2. Upload Submissions
                     </h2>
-                    <p className="text-xs md:text-base">
+                    <p className="text-xs md:text-lg">
                       Upload handwritten or digital answer sheets for AI
                       evaluation.
                     </p>
@@ -84,7 +84,7 @@ function HowItWorksSection() {
                     <h2 className="title-font text-base md:text-xl text-blue-600 font-bold mb-1">
                       3. Get Instant Results
                     </h2>
-                    <p className="text-xs md:text-base">
+                    <p className="text-xs md:text-lg">
                       Receive detailed, bias-free grading results instantly with
                       AI-driven accuracy and feedback.
                     </p>
