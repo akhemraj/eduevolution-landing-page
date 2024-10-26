@@ -40,7 +40,7 @@ function HeroSection() {
                 priority
                 className="w-6 h-6 md:w-9 md:h-9"
               />
-              <span className="md:text-2xl text-blue-600 font-bold">
+              <span className="text-lg md:text-[2rem] text-blue-600 font-bold">
                 EduSage<span className="text-gray-800">AI</span>
               </span>
             </Link>

@@ -69,7 +69,7 @@ function FeatureSection() {
             </p>
           </div>
           {/* Card 4 */}
-          <div className="w-64 md:w-[310px] md:h-[240px] p-5 bg-white border border-gray-200 rounded-lg hover:shadow-md">
+          <div className="w-64 md:w-[310px] md:h-[220px] p-5 bg-white border border-gray-200 rounded-lg hover:shadow-md">
             <div className="text-gray-500 mb-3 flex justify-center sm:justify-start ">
               <div className="flex items-center justify-center w-[45px] h-[45px] bg-cyan-50 rounded-full">
                 <MagnifyingGlass size={26} color="#0891b2" />
@@ -93,7 +93,7 @@ function FeatureSection() {
             <h5 className="whitespace-nowrap mb-2 mt-[25px] lg:mt-[30px] text-lg lg:text-2xl font-semibold tracking-tight text-gray-900 dark:text-white text-center sm:text-left">
               Enhanced Engagement
             </h5>
-            <p className="font-normal text-xs text-gray-500 dark:text-gray-700 text-center sm:text-left sm:text-sm">
+            <p className="font-normal text-xs text-gray-500 dark:text-gray-700 text-center sm:text-left sm:text-base">
               Dashboards offer insights that enhance collaboration among
               teachers, students, and parents
             </p>
