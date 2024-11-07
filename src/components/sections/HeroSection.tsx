@@ -77,7 +77,7 @@ function HeroSection() {
                   Demo
                 </Link>
                 <Link
-                  href="https://edu-evolution-ai-frontend.vercel.app/"
+                  href="https://demo.edusageai.com/"
                   target="_blank"
                 >
                   <Button
@@ -151,7 +151,7 @@ function HeroSection() {
                   Demo
                 </Link>
                 <Link
-                  href="https://edu-evolution-ai-frontend.vercel.app/"
+                  href="https://demo.edusageai.com/"
                   target="_blank"
                 >
                   <Button
