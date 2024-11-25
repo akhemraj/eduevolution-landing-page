@@ -9,7 +9,7 @@ const PlusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: "EduSageAI",
-  description: "AI-powered automated paper review",
+  description: "AI-powered automated answer sheet grading",
 };
 
 export default function RootLayout({
