@@ -76,10 +76,7 @@ function HeroSection() {
                 >
                   Demo
                 </Link>
-                <Link
-                  href="https://demo.edusageai.com/"
-                  target="_blank"
-                >
+                <Link href="https://demo.edusageai.com/" target="_blank">
                   <Button
                     variant="secondary"
                     className="text-white bg-blue-600 hover:bg-blue-800 ml-1"
@@ -150,10 +147,7 @@ function HeroSection() {
                 >
                   Demo
                 </Link>
-                <Link
-                  href="https://demo.edusageai.com/"
-                  target="_blank"
-                >
+                <Link href="https://demo.edusageai.com/" target="_blank">
                   <Button
                     variant="secondary"
                     className="mt-4 text-white bg-blue-600 hover:bg-blue-800"
@@ -168,7 +162,7 @@ function HeroSection() {
         </nav>
 
         {/* Home Page */}
-        <div className="grid grid-flow-row sm:grid-flow-col gap-8 px-[30px] lg:pl-[110px] py-[120px] sm:pt-16">
+        <div className="grid grid-flow-row sm:grid-flow-col gap-8 px-[30px] lg:pl-[110px] py-[120px] pb-[100px] sm:pt-16">
           <div className="flex flex-col md:mt-5 items-start row-start-1">
             <h1 className="font-bold text-2xl leading-7 lg:text-[38px] lg:leading-[46px] text-gray-800">
               Revolutionize the way
