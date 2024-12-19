@@ -6,7 +6,7 @@ import { X, List } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import Image from "next/image";
 
-function page() {
+function TermsAndConditionsPage() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -151,13 +151,14 @@ function page() {
           </div>
           <br />
           <span className="mb-4 text-base">
-            Welcome to EduSageAI ("we," "our," or "us"). We are committed to
-            protecting your privacy and ensuring the security of your personal
-            information. This Privacy Policy explains how we collect, use,
-            disclose, and safeguard your information when you use our AI-based
-            EdTech platform (the "Platform"). By accessing or using the
-            Platform, you agree to the terms of this Privacy Policy. If you do
-            not agree, please do not use the Platform.
+            Welcome to EduSageAI (&quot;we&quot;, &quot;our&quot;, or
+            &quot;us&quot;). We are committed to protecting your privacy and
+            ensuring the security of your personal information. This Privacy
+            Policy explains how we collect, use, disclose, and safeguard your
+            information when you use our AI-based EdTech platform (the
+            &quot;Platform&quot;). By accessing or using the Platform, you agree
+            to the terms of this Privacy Policy. If you do not agree, please do
+            not use the Platform.
           </span>
           <br />
           <div className="pb-5">
@@ -337,8 +338,9 @@ function page() {
                   Changes to This Privacy Policy
                 </div>
                 We may update this Privacy Policy periodically. Changes will be
-                effective upon posting on our Platform, with the "Effective
-                Date" updated. We encourage you to review this policy regularly.
+                effective upon posting on our Platform, with the &quot;Effective
+                Date&quot; updated. We encourage you to review this policy
+                regularly.
               </div>
 
               <div className="mt-5 ml-4 text-base">
@@ -371,10 +373,11 @@ function page() {
           Terms of Use
         </div>
         <div className="p-5">
-          Welcome to EduSageAI ("we," "our," or "us"). By accessing or using our
-          AI-based EdTech platform (the "Platform"), you agree to comply with
-          and be bound by these Terms of Use. If you do not agree with these
-          terms, please do not use the Platform.
+          Welcome to EduSageAI (&quot;we&quot;, &quot;our&quot;, or
+          &quot;us&quot;). By accessing or using our AI-based EdTech platform
+          (the &quot;Platform&quot;), you agree to comply with and be bound by
+          these Terms of Use. If you do not agree with these terms, please do
+          not use the Platform.
         </div>
         <div className="mt-5 ml-4 text-base">
           <div className="text-2xl font-bold mb-2">Eligibility</div>
@@ -465,11 +468,11 @@ function page() {
           <div className="text-2xl font-bold mb-2">
             Disclaimer of Warranties
           </div>
-          The Platform is provided "as is" and "as available." We do not
-          guarantee that the Platform will be error-free, uninterrupted, or
-          secure. To the maximum extent permitted by law, we disclaim all
-          warranties, express or implied, including warranties of
-          merchantability and fitness for a particular purpose.
+          The Platform is provided &quot;as&quot; is&quot; and &quot;as
+          available.&quot; We do not guarantee that the Platform will be
+          error-free, uninterrupted, or secure. To the maximum extent permitted
+          by law, we disclaim all warranties, express or implied, including
+          warranties of merchantability and fitness for a particular purpose.
         </div>
         <div className="mt-5 ml-4 text-base">
           <div className="text-2xl font-bold mb-2">Limitation of Liability</div>
@@ -517,4 +520,4 @@ function page() {
   );
 }
 
-export default page;
+export default TermsAndConditionsPage;
