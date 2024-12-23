@@ -47,6 +47,12 @@ function FooterSection() {
           </div>
           <hr className="my-6 border-white sm:mx-auto dark:border-white lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-center">
+            <Link
+              href={"/TermsAndConditionsSection"}
+              className="mr-5 text-xs cursor-pointer  md:text-xs sm:text-sm text-gray-500 text-center dark:text-gray-400"
+            >
+              Privacy Policy
+            </Link>
             <p className="text-[10px] md:text-xs sm:text-sm text-gray-500 text-center dark:text-gray-400">
               © Copyright {new Date().getFullYear()}, All rights reserved by
               EduSageAI
