@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { X, List } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import Image from "next/image";
+import FooterSection from "@/components/sections/FooterSection";
 
 function page() {
   const [isOpen, setIsOpen] = useState(false);
@@ -140,7 +141,7 @@ function page() {
           </div>
         </div>
       </nav>
-      <div className="bg-white text-black dark:bg-black dark:text-white">
+      <div className="bg-white text-black dark:bg-black px-[20px] pt-[25px] md:px-[50px] md:pt-[40px] dark:text-white">
         <div className="container mx-auto px-4 py-8 dark:text-gray-400">
           <div className="mb-4 text-center text-m">
             Effective Date: 01/10/2024
@@ -363,6 +364,7 @@ function page() {
           </div>
         </div>
       </div>
+      <FooterSection />
     </div>
   );
 }
