@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import FooterSection from "@/components/sections/FooterSection";
 
-function page() {
+function PrivacyPolicyPage() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -369,4 +369,4 @@ function page() {
   );
 }
 
-export default page;
+export default PrivacyPolicyPage;
