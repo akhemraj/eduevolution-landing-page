@@ -162,20 +162,36 @@ function HeroSection() {
         </nav>
 
         {/* Home Page */}
-        <div className="grid grid-flow-row sm:grid-flow-col gap-8 px-[30px] lg:pl-[110px] py-[120px] pb-[100px] sm:pt-16">
+        <div className="grid grid-flow-row sm:grid-flow-col gap-8 px-[30px] lg:pl-[110px] py-[92px] pb-[75px] sm:pt-[54px]">
           <div className="flex flex-col md:mt-5 items-start row-start-1">
             <h1 className="font-bold text-2xl leading-7 lg:text-[38px] lg:leading-[46px] text-gray-800">
-              Revolutionize the way
+              Revolutionizing Assignment 
             </h1>
             <h1 className="font-bold text-2xl leading-7 lg:text-[38px] lg:leading-[46px] text-gray-800">
-              you grade exams
+              Grading with AI
             </h1>
 
             <div className="mt-[15px] mb-[30px] lg:mb-[35px]">
-              <p className="text-sm mr-3 lg:text-lg font-medium text-gray-700">
-                <span className="text-blue-600">AI-Powered</span> grading that
-                delivers Fast, Accurate,
-                <span className="inline sm:block"> and Fair exam results</span>
+              <p className="text-sm mr-2 lg:text-lg font-medium text-gray-700">
+                <span className="text-blue-600">AI-Powered</span> grading for&nbsp;
+                <span className="bg-yellow-200 text-blue-600 px-2 py-1 rounded inline-block whitespace-nowrap"
+                  ref={(el) => {
+                    if (el && !el.dataset.initialized) {
+                      el.dataset.initialized = "true";
+                      let current = "handwritten";
+                      el.textContent = current;
+                      setInterval(() => {
+                        current = current === "handwritten" ? "digital" : "handwritten";
+                        el.textContent = current;
+                      }, 2000);
+                    }
+                  }}>
+                </span>
+                <br />
+                <span className="block">
+                  <span className="text-blue-600">Subjective</span> and <span className="text-blue-600">Coding</span> assignments that
+                </span>
+                <span className="block">delivers Fast, Accurate and Fair results.</span>
               </p>
             </div>
 
