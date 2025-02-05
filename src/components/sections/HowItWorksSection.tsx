@@ -22,17 +22,15 @@ function HowItWorksSection() {
               <div>
                 <p className="mt-[15px] md:mt-5  text-2xl font-bold tracking-tight text-gray-800 md:text-4xl  text-center md:text-left">
                   <span className="md:leading-relaxed">
-                    Create exams and start
+                    Start grading with AI in just
                   </span>{" "}
-                  grading with AI in just
                   <span className="block text-blue-600 md:leading-relaxed">
                     3 simple steps
                   </span>
                 </p>
 
                 <p className="max-w-[480px] mt-[10px] text-lg font-medium leading-7 text-gray-700 hidden md:block">
-                  Let AI analyze your answers and get Instant, Bias-free
-                  results—all with just a few clicks
+                  Let AI analyze your answers and get results with just a few clicks.
                 </p>
               </div>
             </div>
@@ -51,11 +49,10 @@ function HowItWorksSection() {
                   </div>
                   <div className="flex-grow pl-4">
                     <h2 className="title-font text-base md:text-xl text-blue-600 font-bold mb-1">
-                      1. Setup Exam
+                      1. Setup Exam or Assessment
                     </h2>
                     <p className="text-xs md:text-lg">
-                      Create or upload your question paper along with model
-                      answers to guide the AI for accurate grading.
+                      Create or upload assignments along with model answers to guide AI for accurate grading.
                     </p>
                   </div>
                 </div>
@@ -71,8 +68,7 @@ function HowItWorksSection() {
                       2. Upload Submissions
                     </h2>
                     <p className="text-xs md:text-lg">
-                      Upload handwritten or digital answer sheets for AI
-                      evaluation.
+                      Upload submissions for AI evaluation.
                     </p>
                   </div>
                 </div>
@@ -85,8 +81,7 @@ function HowItWorksSection() {
                       3. Get Instant Results
                     </h2>
                     <p className="text-xs md:text-lg">
-                      Receive detailed, bias-free grading results instantly with
-                      AI-driven accuracy and feedback.
+                      Receive detailed and bias-free results instantly.
                     </p>
                   </div>
                 </div>

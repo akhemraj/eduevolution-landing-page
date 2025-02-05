@@ -27,7 +27,7 @@ function FooterSection() {
                         EduSage<span className="text-gray-800">AI</span>
                       </h2>
                       <p className="text-xs md:text-sm text-gray-700 font-normal">
-                        Revolutionize the way you grade exams
+                        Revolutionizing Assignment Grading with AI
                       </p>
                     </div>
                   </div>
