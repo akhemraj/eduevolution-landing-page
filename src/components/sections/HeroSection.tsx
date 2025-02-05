@@ -178,20 +178,20 @@ function HeroSection() {
                   ref={(el) => {
                     if (el && !el.dataset.initialized) {
                       el.dataset.initialized = "true";
-                      let current = "handwritten";
+                      let current = "Coding";
                       el.textContent = current;
                       setInterval(() => {
-                        current = current === "handwritten" ? "digital" : "handwritten";
+                        current = current === "Coding" ? "Subjective" : "Coding";
                         el.textContent = current;
                       }, 2000);
                     }
                   }}>
                 </span>
-                <br />
+                {/* <br /> */}
                 <span className="block">
-                  <span className="text-blue-600">Subjective</span> and <span className="text-blue-600">Coding</span> assignments that
+                  assignments that delivers
                 </span>
-                <span className="block">delivers Fast, Accurate and Fair results.</span>
+                <span className="block"> Fast, Accurate and Fair results.</span>
               </p>
             </div>
 
