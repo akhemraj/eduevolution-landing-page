@@ -76,7 +76,7 @@ function HeroSection() {
                 >
                   Demo
                 </Link>
-                <Link href="https://demo.edusageai.com/" target="_blank">
+                <Link href="https://console.edusageai.com/" target="_blank">
                   <Button
                     variant="secondary"
                     className="text-white bg-blue-600 hover:bg-blue-800 ml-1"
@@ -147,7 +147,7 @@ function HeroSection() {
                 >
                   Demo
                 </Link>
-                <Link href="https://demo.edusageai.com/" target="_blank">
+                <Link href="https://console.edusageai.com/" target="_blank">
                   <Button
                     variant="secondary"
                     className="mt-4 text-white bg-blue-600 hover:bg-blue-800"
