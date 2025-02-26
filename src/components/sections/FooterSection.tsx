@@ -27,7 +27,7 @@ function FooterSection() {
                         EduSage<span className="text-gray-800">AI</span>
                       </h2>
                       <p className="text-xs md:text-sm text-gray-700 font-normal">
-                        Revolutionize the way you grade exams
+                        Revolutionizing Assignment Grading with AI
                       </p>
                     </div>
                   </div>
@@ -47,6 +47,21 @@ function FooterSection() {
           </div>
           <hr className="my-6 border-white sm:mx-auto dark:border-white lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-center">
+            <div className="flex text-[10px] md:text-xs sm:text-sm mb-3 md:mb-0 justify-center items-center space-x-5 text-gray-500 dark:text-gray-400 mr-3">
+              <Link
+                href={"/PrivacyPolicy"}
+                className="text-xs cursor-pointer hover:text-blue-600"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href={"/TermsAndConditionsSection"}
+                className="text-xs cursor-pointer hover:text-blue-600 "
+              >
+                Terms And Conditions
+              </Link>
+            </div>
+
             <p className="text-[10px] md:text-xs sm:text-sm text-gray-500 text-center dark:text-gray-400">
               © Copyright {new Date().getFullYear()}, All rights reserved by
               EduSageAI
