@@ -12,7 +12,7 @@ const EvaluationCount = () => {
         "https://backend.edusageai.com/public/evaluations/count"
       );
       const data = await response.json();
-      setCount(data?.data?.count || 0);
+      setCount(data?.data || 0);
     } catch (error) {
       console.error(error);
     }
