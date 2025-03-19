@@ -9,7 +9,7 @@ const EvaluationCount = () => {
   const fetchEvaluationsCount = async () => {
     try {
       const response = await fetch(
-        "https://backend.edusageai.com/getEvaluationCount"
+        "https://backend.edusageai.com/public/evaluations/count"
       );
       const data = await response.json();
       setCount(data?.data?.count || 0);
