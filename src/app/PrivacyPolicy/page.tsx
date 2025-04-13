@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { X, List } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import Image from "next/image";
-import FooterSection from "@/components/sections/FooterSection";
+import FooterSection from "@/components/sections/Footer";
 
 function PrivacyPolicyPage() {
   const [isOpen, setIsOpen] = useState(false);

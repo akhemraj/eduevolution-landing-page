@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   Lightning,
   ArrowRight,
@@ -12,7 +13,12 @@ import {
   List,
 } from "@phosphor-icons/react/dist/ssr";
 
+const words = ["Subjective", "Coding"];
+
 function HeroSection() {
+  const [wordIndex, setWordIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -22,6 +28,38 @@ function HeroSection() {
   const handleLinkClick = () => {
     setIsOpen(false);
   };
+
+  const handleBookCall = () => {
+    if (typeof window !== "undefined" && window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: process.env.NEXT_PUBLIC_CALENDLY_URL,
+      });
+    }
+  };
+
+  useEffect(() => {
+    const currentWord = words[wordIndex];
+    const typingSpeed = isDeleting ? 80 : 120;
+
+    if (!isDeleting && displayedText === currentWord) {
+      setTimeout(() => setIsDeleting(true), 1200);
+      return;
+    }
+
+    if (isDeleting && displayedText === "") {
+      setIsDeleting(false);
+      setWordIndex((prev) => (prev + 1) % words.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setDisplayedText((prev) =>
+        isDeleting ? prev.slice(0, -1) : currentWord.slice(0, prev.length + 1)
+      );
+    }, typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [displayedText, isDeleting, wordIndex]);
 
   return (
     <>
@@ -40,7 +78,7 @@ function HeroSection() {
                 priority
                 className="w-6 h-6 md:w-9 md:h-9"
               />
-              <span className="text-lg md:text-[2rem] text-blue-600 font-bold">
+              <span className="text-lg md:text-2xl text-blue-600 font-bold">
                 EduSage<span className="text-gray-800">AI</span>
               </span>
             </Link>
@@ -57,25 +95,38 @@ function HeroSection() {
 
             {/* Desktop Navbar */}
             <div className="hidden md:flex">
-              <div className="text-base font-semibold flex gap-5">
+              <div className="text-[15px] font-semibold flex items-center gap-5">
+                <Link
+                  className="text-gray-600 font-semibold hover:text-blue-600"
+                  href="#CodeGrader"
+                >
+                  Code Grader
+                </Link>
+                <Link
+                  className="text-gray-600 font-semibold hover:text-blue-600"
+                  href="#RubricGenerator"
+                >
+                  Rubric Generator
+                </Link>
                 <Link
                   href="#Features"
-                  className="py-2 text-gray-600 hover:text-blue-600"
+                  className="text-gray-600 hover:text-blue-600"
                 >
                   Features
                 </Link>
                 <Link
-                  href="#How-it-works"
-                  className="py-2 text-gray-600 hover:text-blue-600"
+                  className="text-gray-600 font-semibold hover:text-blue-600"
+                  href="#HowItWorks"
                 >
                   How it works
                 </Link>
-                <Link
-                  href="#Demo"
-                  className="py-2 text-gray-600 hover:text-blue-600"
+                <Button
+                  variant="link"
+                  className="text-gray-600 font-semibold hover:text-blue-600 px-0 hover:no-underline"
+                  onClick={handleBookCall}
                 >
-                  Demo
-                </Link>
+                  Schedule a call
+                </Button>
                 <Link href="https://console.edusageai.com/" target="_blank">
                   <Button
                     variant="secondary"
@@ -127,6 +178,20 @@ function HeroSection() {
 
               <div className="flex flex-col items-center  space-y-5 mt-28">
                 <Link
+                  href="#CodeGrader"
+                  className="text-gray-600 font-semibold hover:text-blue-600 text-lg"
+                  onClick={handleLinkClick}
+                >
+                  Code Grader
+                </Link>
+                <Link
+                  href="#RubricGenerator"
+                  className="text-gray-600 font-semibold hover:text-blue-600 text-lg"
+                  onClick={handleLinkClick}
+                >
+                  Rubric Generator
+                </Link>
+                <Link
                   href="#Features"
                   className="text-gray-600 font-semibold hover:text-blue-600 text-lg"
                   onClick={handleLinkClick}
@@ -134,19 +199,22 @@ function HeroSection() {
                   Features
                 </Link>
                 <Link
-                  href="#How-it-works"
+                  href="#HowItWorks"
                   className="text-gray-600 font-semibold hover:text-blue-600 text-lg"
                   onClick={handleLinkClick}
                 >
                   How it works
                 </Link>
-                <Link
-                  href="#Demo"
+                <Button
+                  variant="link"
                   className="text-gray-600 font-semibold hover:text-blue-600 text-lg"
-                  onClick={handleLinkClick}
+                  onClick={() => {
+                    handleLinkClick();
+                    handleBookCall();
+                  }}
                 >
-                  Demo
-                </Link>
+                  Schedule a call
+                </Button>
                 <Link href="https://console.edusageai.com/" target="_blank">
                   <Button
                     variant="secondary"
@@ -162,51 +230,57 @@ function HeroSection() {
         </nav>
 
         {/* Home Page */}
-        <div className="grid grid-flow-row sm:grid-flow-col gap-8 px-[30px] lg:pl-[110px] py-[92px] pb-[75px] sm:pt-[54px]">
-          <div className="flex flex-col md:mt-5 items-start row-start-1">
+        <div className="flex items-center justify-between py-[100px] pb-[60px] lg:py-[80px] px-5 lg:px-[120px]  lg:pr-0 lg:pt-0">
+          <div className="flex flex-col md:mt-5 items-start -translate-y-4">
             <h1 className="font-bold text-2xl leading-7 lg:text-[38px] lg:leading-[46px] text-gray-800">
-              Revolutionizing Assignment 
+              Revolutionize Assignment
             </h1>
-            <h1 className="font-bold text-2xl leading-7 lg:text-[38px] lg:leading-[46px] text-gray-800">
-              Grading with AI
+            <h1 className="font-bold text-2xl leading-7 lg:text-[38px] lg:leading-[46px] text-gray-800 mt-1 lg:mt-0">
+              Grading with{" "}
+              <span className="bg-gradient-to-br from-blue-400 to-blue-700 inline-block text-transparent bg-clip-text">
+                AI
+              </span>
             </h1>
 
             <div className="mt-[15px] mb-[30px] lg:mb-[35px]">
               <p className="text-sm mr-2 lg:text-lg font-medium text-gray-700">
-                <span className="text-blue-600">AI-Powered</span> grading for&nbsp;
-                <span className="bg-yellow-200 text-blue-600 px-2 py-1 rounded inline-block whitespace-nowrap"
-                  ref={(el) => {
-                    if (el && !el.dataset.initialized) {
-                      el.dataset.initialized = "true";
-                      let current = "Coding";
-                      el.textContent = current;
-                      setInterval(() => {
-                        current = current === "Coding" ? "Subjective" : "Coding";
-                        el.textContent = current;
-                      }, 2000);
-                    }
-                  }}>
-                </span>
+                <span className="text-blue-600 font-semibold">AI-Powered</span>{" "}
+                grading for&nbsp;
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="text-xs lg:text-base font-semibold bg-blue-600 text-white py-1 px-[6px] lg:px-2 rounded-md"
+                >
+                  {displayedText}
+                  <motion.span
+                    animate={{ opacity: [0, 1, 0] }}
+                    transition={{ repeat: Infinity, duration: 0.8 }}
+                  >
+                    |
+                  </motion.span>
+                </motion.span>
+                <span>&nbsp;assignments</span>
                 {/* <br /> */}
-                <span className="block">
-                  assignments that delivers
+                <span className="block mt-1 lg:mt-0">
+                  that delivers Fast, Accurate and Fair results
                 </span>
-                <span className="block"> Fast, Accurate and Fair results.</span>
               </p>
             </div>
 
             <div className="flex gap-[15px] lg:gap-5 items-center">
-              <Link href="#Demo">
+              <Link target="_blank" href="https://console.edusageai.com/">
                 <Button
                   variant="secondary"
-                  className="py-[22px] px-4 lg:py-6 lg:px-6 gap-2 text-white bg-blue-600 hover:bg-blue-800 focus:ring-2 focus:ring-blue-300 font-semibold lg:font-bold text-sm"
+                  className="py-[22px] px-4 lg:py-6 lg:px-6 gap-2 text-white bg-gradient-to-br from-blue-500 to-blue-700 hover:brightness-90 focus:ring-2 focus:ring-blue-300 font-semibold lg:font-bold text-sm"
                 >
                   See it in Action
                   <Lightning size={16} color="white" weight="fill" />
                 </Button>
               </Link>
 
-              <Link href="#How-it-works">
+              <Link href="#HowItWorks">
                 <Button
                   className="py-5 px-4 lg:py-6 lg:px-6 gap-2 hover:bg-blue-50 hover:text-blue-600 text-blue-600 border-2 border-blue-600 font-semibold lg:font-bold text-sm"
                   variant="outline"
@@ -262,15 +336,32 @@ function HeroSection() {
           </div>
 
           {/* Image container */}
-          <div className="hidden md:flex justify-end">
+          <Image
+            src="/images/heroSectionBg.png"
+            alt="hero bg"
+            width={835 - 80}
+            height={614 - 80}
+            className="hidden md:block"
+            priority
+          />
+          {/* <div className="w-[885px] h-[660px] relative">
             <Image
-              src="/images/heroBG.png"
-              alt="Image not Found"
-              width={600}
-              height={550}
+              src="/images/heroSectionBg.png"
+              alt="hero bg"
+              fill
+              className="hidden md:block object-contain"
               priority
             />
-          </div>
+          </div> */}
+          {/* <div className="hidden md:flex md:justify-end justify-end relative w-[885px] h-[664px]">
+            <Image
+              src="/images/heroSectionBg.png"
+              alt="hero section bg"
+              fill
+              style={{ objectFit: "contain" }}
+              priority
+            />
+          </div> */}
         </div>
       </div>
     </>

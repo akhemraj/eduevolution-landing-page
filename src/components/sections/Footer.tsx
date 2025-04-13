@@ -4,10 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
-function FooterSection() {
+function Footer() {
   return (
     <div>
-      <footer className=" bg-blue-50 mt-[240px]">
+      <footer className=" bg-blue-50 mt-0 lg:mt-[160px]">
         <div className="mx-auto w-full max-w-screen-xl px-[40px] py-[50px] md:px-0">
           <div className="md:flex md:justify-between">
             <div className="mb-28 md:mb-0">
@@ -73,4 +73,4 @@ function FooterSection() {
   );
 }
 
-export default FooterSection;
+export default Footer;
