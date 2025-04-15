@@ -230,10 +230,10 @@ function HeroSection() {
         </nav>
 
         {/* Home Page */}
-        <div className="flex items-center justify-between py-[100px] pb-[60px] lg:py-[80px] px-5 lg:px-[120px]  lg:pr-0 lg:pt-0">
+        <div className="flex items-center justify-between py-[100px] pb-[60px] lg:py-[80px] lg:pb-14 px-5 lg:px-[120px] lg:pr-0 lg:pt-0">
           <div className="flex flex-col md:mt-5 items-start -translate-y-4">
             <h1 className="font-bold text-2xl leading-7 lg:text-[38px] lg:leading-[46px] text-gray-800">
-              Revolutionize Assignment
+              Revolutionize
             </h1>
             <h1 className="font-bold text-2xl leading-7 lg:text-[38px] lg:leading-[46px] text-gray-800 mt-1 lg:mt-0">
               Grading with{" "}

@@ -36,9 +36,9 @@ const RubricGenerator = () => {
           </p>
           <div className="block lg:hidden w-full h-auto relative aspect-[534/392] mb-6">
             <Image
-              src="/images/code-grader.svg"
-              alt="Code-grader"
-              className="object-cover -translate-x-4"
+              src="/images/rubric-generator.png"
+              alt="Rubric-generator"
+              className="object-cover"
               fill
             />
           </div>
@@ -74,10 +74,10 @@ const RubricGenerator = () => {
             </Button>
           </Link>
         </div>
-        <div className="hidden lg:block w-[534px] h-[392px] relative">
+        <div className="hidden lg:block w-[564px] h-[406px] relative">
           <Image
-            src="/images/code-grader.svg"
-            alt="Code-grader"
+            src="/images/rubric-generator.png"
+            alt="Rubric-generator"
             className="object-cover translate-x-4"
             fill
           />

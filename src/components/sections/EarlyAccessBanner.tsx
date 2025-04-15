@@ -16,13 +16,13 @@ const EarlyAccessBanner = () => {
       <Banner
         heading={
           <h3 className="text-xl lg:text-[28px] font-bold text-gray-800">
-            Get Early Access to{" "}
+            Join{" "}
             <span className="text-blue-600 block lg:inline">
-              Premium Features!
+              EduSageAI Newsletter
             </span>
           </h3>
         }
-        description="Join the waitlist to unlock advanced tools and exclusive capabilities"
+        description="Stay in the loop with AI education trends, product updates, and early feature access - sent to your inbox"
         className=" max-w-[1260px] flex-1"
       >
         <div className="w-full lg:w-[340px] flex justify-between items-center rounded-lg border-2 border-blue-400 px-3 py-1 pr-1">

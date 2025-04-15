@@ -14,7 +14,7 @@ const NextStepBanner = () => {
   };
 
   return (
-    <div className="flex justify-center py-[60px] px-5 lg:px-0">
+    <div className="flex justify-center py-[60px] pt-[50px] px-5 lg:px-0">
       <Banner
         heading={
           <h3 className="text-xl lg:text-[28px] font-bold text-gray-800">

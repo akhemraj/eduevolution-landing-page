@@ -15,7 +15,7 @@ const Banner = ({ heading, description, className, children }: BannerProps) => {
       )}
     >
       {heading}
-      <p className="text-sm lg:text-base font-medium text-gray-700 max-w-[260px] lg:max-w-[400px]">
+      <p className="text-sm lg:text-base font-medium text-gray-700 max-w-[300px] lg:max-w-[420px]">
         {description}
       </p>
       {children && <div className="mt-5">{children}</div>}

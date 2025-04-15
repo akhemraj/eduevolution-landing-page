@@ -5,7 +5,7 @@ const SupportIntegration = () => {
     <div className="px-5 lg:px-[120px] py-[60px] space-y-[30px] lg:space-y-[60px]">
       <div className="flex flex-col items-center">
         <h4 className="text-gray-700 underline font-semibold text-base lg:text-lg mb-7 lg:mb-4">
-          Recognized and supported by:
+          Recognized and supported by
         </h4>
         <div className="flex flex-col lg:flex-row items-center lg:space-x-14">
           <div className="w-[200px] lg:w-[250px] h-[125px] lg:h-[150px] relative">
@@ -28,7 +28,7 @@ const SupportIntegration = () => {
       </div>
       <div className="flex flex-col items-center">
         <h4 className="text-gray-700 underline font-semibold text-base lg:text-lg mb-12 lg:mb-10">
-          LMS Integrations:
+          LMS Integrations
         </h4>
         <div className="flex flex-col space-y-12 space-x-0 lg:flex-row lg:items-center lg:space-y-0 lg:space-x-14">
           <div className="w-[200px] lg:w-[206px] h-[42px] lg:h-[48px] relative">
