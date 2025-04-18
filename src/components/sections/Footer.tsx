@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 function Footer() {
   return (
     <div>
-      <footer className=" bg-blue-50 mt-0 lg:mt-[160px]">
+      <footer className=" bg-blue-50 mt-0 ">
         <div className="mx-auto w-full max-w-screen-xl px-[40px] py-[50px] md:px-0">
           <div className="md:flex md:justify-between">
             <div className="mb-28 md:mb-0">
@@ -47,12 +47,36 @@ function Footer() {
           </div>
           <hr className="my-6 border-white sm:mx-auto dark:border-white lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-center">
-            <div className="flex text-[10px] md:text-xs sm:text-sm mb-3 md:mb-0 justify-center items-center space-x-5 text-gray-500 dark:text-gray-400 mr-3">
+            <div className="flex text-[10px] md:text-xs sm:text-sm mb-3 md:mb-0 justify-center items-center space-x-5 text-gray-700 dark:text-gray-800 mr-3">
               <Link
                 href={"/PrivacyPolicy"}
                 className="text-xs cursor-pointer hover:text-blue-600"
               >
                 Privacy Policy
+              </Link>
+              <Link
+                href={"/about-us"}
+                className="text-xs cursor-pointer hover:text-blue-600"
+              >
+                About Us
+              </Link>
+              <Link
+                href={"/contact-us"}
+                className="text-xs cursor-pointer hover:text-blue-600"
+              >
+                Contact Us
+              </Link>
+              <Link
+                href={"/pricing"}
+                className="text-xs cursor-pointer hover:text-blue-600"
+              >
+                Pricing
+              </Link>
+              <Link
+                href={"/cancellation-and-refund"}
+                className="text-xs cursor-pointer hover:text-blue-600"
+              >
+                Cancellation/ Refund Policy
               </Link>
               <Link
                 href={"/TermsAndConditionsSection"}
@@ -62,7 +86,7 @@ function Footer() {
               </Link>
             </div>
 
-            <p className="text-[10px] md:text-xs sm:text-sm text-gray-500 text-center dark:text-gray-400">
+            <p className="text-[10px] md:text-xs sm:text-sm text-gray-700 text-center dark:text-gray-400">
               © Copyright {new Date().getFullYear()}, All rights reserved by
               EduSageAI
             </p>
