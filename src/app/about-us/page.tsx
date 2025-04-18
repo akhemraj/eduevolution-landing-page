@@ -143,11 +143,12 @@ function AboutUs() {
           </h2>
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
             At <span className="font-semibold text-blue-600">EduSageAI</span>,
-            we're on a mission to revolutionize education through cutting-edge
-            AI technology. Founded by a passionate team dedicated to enhancing
-            learning experiences, we've developed an innovative AI-powered
-            platform that streamlines evaluation, boosts fairness, and unlocks
-            actionable insights for students and educators alike.
+            we&apos;re on a mission to revolutionize education through
+            cutting-edge AI technology. Founded by a passionate team dedicated
+            to enhancing learning experiences, we&apos;ve developed an
+            innovative AI-powered platform that streamlines evaluation, boosts
+            fairness, and unlocks actionable insights for students and educators
+            alike.
           </p>
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
             Every day, we strive to transform education by empowering teachers,
@@ -155,8 +156,9 @@ function AboutUs() {
             efficiency, accuracy, and growth.
           </p>
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-            We're just getting started—and we'd love for you to be part of our
-            exciting journey. Let's shape the future of education together!
+            We&apos;re just getting started—and we&apos;d love for you to be
+            part of our exciting journey. Let&apos;s shape the future of
+            education together!
           </p>
           <Link href="https://console.edusageai.com/" target="_blank">
             <Button className="bg-blue-600 hover:bg-blue-800 text-white text-lg px-8 py-3">
