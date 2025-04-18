@@ -6,7 +6,7 @@ import { X, List } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import Image from "next/image";
 import FooterSection from "@/components/sections/Footer";
-function page() {
+function AboutUs() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -170,4 +170,4 @@ function page() {
   );
 }
 
-export default page;
+export default AboutUs;
