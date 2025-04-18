@@ -207,8 +207,8 @@ export default function PricingPage() {
           Choose Your Plan
         </h2>
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-16">
-          Whether you're a solo educator or an institution, we've got a plan
-          tailored for you.
+          Whether you&apos;re a solo educator or an institution, we&apos;ve got
+          a plan tailored for you.
         </p>
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
           {pricingPlans.map((plan, index) => (
