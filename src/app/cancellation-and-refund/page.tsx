@@ -147,10 +147,10 @@ export default function RefundPolicyPage() {
               14‑Day Cancellation &amp; Refund Window
             </h3>
             <p>
-              If you're not completely satisfied, you may cancel your
+              If you&apos;re not completely satisfied, you may cancel your
               subscription within <span className="font-semibold">14 days</span>{" "}
-              from the date of purchase. Upon cancellation, you'll receive a
-              full refund to your original payment method.
+              from the date of purchase. Upon cancellation, you&apos;ll receive
+              a full refund to your original payment method.
             </p>
 
             <h3 className="text-xl font-semibold text-gray-800">
@@ -185,7 +185,7 @@ export default function RefundPolicyPage() {
               We reserve the right to decline refund requests in cases of
               suspected abuse, fraud, or violation of our Terms of Service. For
               questions or assistance, please reach out to our support
-              team—we're here to help!
+              team—we&apos;re here to help!
             </p>
 
             <p className="text-right text-sm text-gray-500">
