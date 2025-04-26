@@ -9,8 +9,7 @@ import {
   Lightning,
   ArrowRight,
   Check,
-  X,
-  List,
+  Sparkle,
 } from "@phosphor-icons/react/dist/ssr";
 
 const words = ["Subjective", "Coding"];
@@ -19,23 +18,6 @@ function HeroSection() {
   const [wordIndex, setWordIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleLinkClick = () => {
-    setIsOpen(false);
-  };
-
-  const handleBookCall = () => {
-    if (typeof window !== "undefined" && window.Calendly) {
-      window.Calendly.initPopupWidget({
-        url: process.env.NEXT_PUBLIC_CALENDLY_URL,
-      });
-    }
-  };
 
   useEffect(() => {
     const currentWord = words[wordIndex];
@@ -64,172 +46,6 @@ function HeroSection() {
   return (
     <>
       <div className="max-w-[1600px] mx-auto">
-        <nav className="px-[20px] pt-[25px] md:px-[50px] md:pt-[40px]">
-          <div className="flex flex-wrap items-center justify-between mx-auto ">
-            <Link
-              href="/"
-              className="flex items-center gap-[6px] md:gap-[10px]"
-            >
-              <Image
-                src="/images/EduSage32x32.svg"
-                alt="Brand-icon"
-                width={36}
-                height={36}
-                priority
-                className="w-6 h-6 md:w-9 md:h-9"
-              />
-              <span className="text-lg md:text-2xl text-blue-600 font-bold">
-                EduSage<span className="text-gray-800">AI</span>
-              </span>
-            </Link>
-
-            {/* Mobile Navbar Button */}
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={toggleNavbar}
-              className="md:hidden inline-flex border-0 p-0 shadow-none hover:bg-transparent"
-            >
-              <List size={20} color="#4B5563" />
-            </Button>
-
-            {/* Desktop Navbar */}
-            <div className="hidden md:flex">
-              <div className="text-[15px] font-semibold flex items-center gap-5">
-                <Link
-                  className="text-gray-600 font-semibold hover:text-blue-600"
-                  href="#CodeGrader"
-                >
-                  Code Grader
-                </Link>
-                <Link
-                  className="text-gray-600 font-semibold hover:text-blue-600"
-                  href="#RubricGenerator"
-                >
-                  Rubric Generator
-                </Link>
-                <Link
-                  href="#Features"
-                  className="text-gray-600 hover:text-blue-600"
-                >
-                  Features
-                </Link>
-                <Link
-                  className="text-gray-600 font-semibold hover:text-blue-600"
-                  href="#HowItWorks"
-                >
-                  How it works
-                </Link>
-                <Button
-                  variant="link"
-                  className="text-gray-600 font-semibold hover:text-blue-600 px-0 hover:no-underline"
-                  onClick={handleBookCall}
-                >
-                  Schedule a call
-                </Button>
-                <Link href="https://console.edusageai.com/" target="_blank">
-                  <Button
-                    variant="secondary"
-                    className="text-white bg-blue-600 hover:bg-blue-800 ml-1"
-                  >
-                    Login
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile Navbar */}
-          <div
-            className={`fixed inset-0 bg-white z-50 transition-opacity duration-300 ${
-              isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
-          >
-            <div
-              className={`flex flex-col h-full p-5 pt-[25px] bg-gray-50 transition-transform duration-300 ${
-                isOpen ? "transform-none" : "transform -translate-y-full"
-              }`}
-            >
-              <div className="flex justify-between items-center">
-                <span className="self-center text-xl sm:text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  <span className="text-lg font-bold text-gray-800 flex gap-[6px]">
-                    <Image
-                      src="/images/EduSage32x32.svg"
-                      alt="Brand-icon"
-                      width={24}
-                      height={24}
-                      priority
-                    />
-                    <span className="md:text-lg text-blue-600 font-bold">
-                      EduSage<span className="text-gray-800">AI</span>
-                    </span>
-                  </span>
-                </span>
-
-                <Button
-                  size="sm"
-                  variant="outline"
-                  onClick={toggleNavbar}
-                  className="md:hidden inline-flex bg-transparent border-0 p-0 shadow-none hover:bg-transparent"
-                >
-                  <X size={22} color="#4B5563" />
-                </Button>
-              </div>
-
-              <div className="flex flex-col items-center  space-y-5 mt-28">
-                <Link
-                  href="#CodeGrader"
-                  className="text-gray-600 font-semibold hover:text-blue-600 text-lg"
-                  onClick={handleLinkClick}
-                >
-                  Code Grader
-                </Link>
-                <Link
-                  href="#RubricGenerator"
-                  className="text-gray-600 font-semibold hover:text-blue-600 text-lg"
-                  onClick={handleLinkClick}
-                >
-                  Rubric Generator
-                </Link>
-                <Link
-                  href="#Features"
-                  className="text-gray-600 font-semibold hover:text-blue-600 text-lg"
-                  onClick={handleLinkClick}
-                >
-                  Features
-                </Link>
-                <Link
-                  href="#HowItWorks"
-                  className="text-gray-600 font-semibold hover:text-blue-600 text-lg"
-                  onClick={handleLinkClick}
-                >
-                  How it works
-                </Link>
-                <Button
-                  variant="link"
-                  className="text-gray-600 font-semibold hover:text-blue-600 text-lg"
-                  onClick={() => {
-                    handleLinkClick();
-                    handleBookCall();
-                  }}
-                >
-                  Schedule a call
-                </Button>
-                <Link href="https://console.edusageai.com/" target="_blank">
-                  <Button
-                    variant="secondary"
-                    className="mt-4 text-white bg-blue-600 hover:bg-blue-800"
-                    onClick={handleLinkClick}
-                  >
-                    Login
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </nav>
-
-        {/* Home Page */}
         <div className="flex items-center justify-between py-[100px] pb-[60px] lg:py-[80px] lg:pb-14 px-5 lg:px-[120px] lg:pr-0 lg:pt-0">
           <div className="flex flex-col md:mt-5 items-start -translate-y-4">
             <h1 className="font-bold text-2xl leading-7 lg:text-[38px] lg:leading-[46px] text-gray-800">
@@ -291,6 +107,14 @@ function HeroSection() {
               </Link>
             </div>
 
+            <div className="bg-blue-100 flex items-center gap-2 p-3 py-2 rounded-md mt-4">
+              <Sparkle size={18} weight="fill" color="#2563eb" />
+              <p className="text-sm font-semibold text-gray-800">
+                Start free trail today -{" "}
+                <span className="text-blue-600">200 free evaluations</span>
+              </p>
+            </div>
+
             <div className="mt-10 max-w-md space-y-1 text-gray-800">
               <div className="flex items-center gap-[10px]">
                 <Check
@@ -334,8 +158,6 @@ function HeroSection() {
               </div>
             </div>
           </div>
-
-          {/* Image container */}
           <Image
             src="/images/heroSectionBg.png"
             alt="hero bg"
@@ -344,24 +166,6 @@ function HeroSection() {
             className="hidden md:block"
             priority
           />
-          {/* <div className="w-[885px] h-[660px] relative">
-            <Image
-              src="/images/heroSectionBg.png"
-              alt="hero bg"
-              fill
-              className="hidden md:block object-contain"
-              priority
-            />
-          </div> */}
-          {/* <div className="hidden md:flex md:justify-end justify-end relative w-[885px] h-[664px]">
-            <Image
-              src="/images/heroSectionBg.png"
-              alt="hero section bg"
-              fill
-              style={{ objectFit: "contain" }}
-              priority
-            />
-          </div> */}
         </div>
       </div>
     </>

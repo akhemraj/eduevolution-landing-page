@@ -1,170 +1,37 @@
-"use client";
-
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { X, List } from "@phosphor-icons/react/dist/ssr";
+import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import FooterSection from "@/components/sections/Footer";
+import Navbar from "@/components/common/Navbar";
+import { Metadata } from "next";
 
-function TermsAndConditionsPage() {
-  const [isOpen, setIsOpen] = useState(false);
+export const metadata: Metadata = {
+  title: "Terms and Conditions | EduSageAI",
+  description:
+    "Review the rules and guidelines for using our platform and services.",
+  keywords: [
+    "Terms of Service",
+    "EduSageAI",
+    "Terms and Conditions",
+    "Usage Policy",
+    "Service Agreement",
+  ],
+  robots: "index, follow",
+};
 
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleLinkClick = () => {
-    setIsOpen(false);
-  };
-
+function TermsAndConditions() {
   return (
     <>
-      <div>
-        <nav className="px-[20px] pt-[25px] md:px-[50px] md:pt-[40px]">
-          <div className="flex flex-wrap items-center justify-between mx-auto ">
-            <Link
-              href="/"
-              className="flex items-center gap-[6px] md:gap-[10px]"
-            >
-              <Image
-                src="/images/EduSage32x32.svg"
-                alt="Brand-icon"
-                width={36}
-                height={36}
-                priority
-                className="w-6 h-6 md:w-9 md:h-9"
-              />
-              <span className="text-lg md:text-[2rem] text-blue-600 font-bold">
-                EduSage<span className="text-gray-800">AI</span>
-              </span>
-            </Link>
-
-            {/* Mobile Navbar Button */}
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={toggleNavbar}
-              className="md:hidden inline-flex border-0 p-0 shadow-none hover:bg-transparent"
-            >
-              <List size={20} color="#4B5563" />
-            </Button>
-
-            {/* Desktop Navbar */}
-            <div className="hidden md:flex">
-              <div className="text-base font-semibold flex gap-5">
-                <Link
-                  href="/"
-                  className="py-2 text-gray-600 hover:text-blue-600"
-                >
-                  Features
-                </Link>
-                <Link
-                  href="/"
-                  className="py-2 text-gray-600 hover:text-blue-600"
-                >
-                  How it works
-                </Link>
-                <Link
-                  href="/"
-                  className="py-2 text-gray-600 hover:text-blue-600"
-                >
-                  Demo
-                </Link>
-                <Link href="https://demo.edusageai.com/" target="_blank">
-                  <Button
-                    variant="secondary"
-                    className="text-white bg-blue-600 hover:bg-blue-800 ml-1"
-                  >
-                    Login
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile Navbar */}
-          <div
-            className={`fixed inset-0 bg-white z-50 transition-opacity duration-300 ${
-              isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
-          >
-            <div
-              className={`flex flex-col h-full p-5 pt-[25px] bg-gray-50 transition-transform duration-300 ${
-                isOpen ? "transform-none" : "transform -translate-y-full"
-              }`}
-            >
-              <div className="flex justify-between items-center">
-                <span className="self-center text-xl sm:text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  <span className="text-lg font-bold text-gray-800 flex gap-[6px]">
-                    <Image
-                      src="/images/EduSage32x32.svg"
-                      alt="Brand-icon"
-                      width={24}
-                      height={24}
-                      priority
-                    />
-                    <span className="md:text-lg text-blue-600 font-bold">
-                      EduSage<span className="text-gray-800">AI</span>
-                    </span>
-                  </span>
-                </span>
-
-                <Button
-                  size="sm"
-                  variant="outline"
-                  onClick={toggleNavbar}
-                  className="md:hidden inline-flex bg-transparent border-0 p-0 shadow-none hover:bg-transparent"
-                >
-                  <X size={22} color="#4B5563" />
-                </Button>
-              </div>
-
-              <div className="flex flex-col items-center  space-y-5 mt-28">
-                <Link
-                  href="/"
-                  className="text-gray-600 font-semibold hover:text-blue-600 text-lg"
-                  onClick={handleLinkClick}
-                >
-                  Features
-                </Link>
-                <Link
-                  href="/"
-                  className="text-gray-600 font-semibold hover:text-blue-600 text-lg"
-                  onClick={handleLinkClick}
-                >
-                  How it works
-                </Link>
-                <Link
-                  href="/"
-                  className="text-gray-600 font-semibold hover:text-blue-600 text-lg"
-                  onClick={handleLinkClick}
-                >
-                  Demo
-                </Link>
-                <Link href="https://demo.edusageai.com/" target="_blank">
-                  <Button
-                    variant="secondary"
-                    className="mt-4 text-white bg-blue-600 hover:bg-blue-800"
-                    onClick={handleLinkClick}
-                  >
-                    Login
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </nav>
-
-        {/* Terms of Use: */}
-        <div className="bg-white container mt-5 mx-auto py-8 px-[20px] pt-[25px] md:px-[50px] md:pt-[40px]">
-          <div className="mb-4 text-center text-m">
-            Effective Date: 01/10/2024
-          </div>
-          <div className="text-4xl font-bold mb-4 text-black-800 text-center ">
-            Terms of Use
-          </div>
-          <div className="p-5">
+      <Navbar />
+      <div className="bg-white container mt-5 mx-auto py-8 px-0 pt-[25px] md:px-[50px] md:pt-[40px]">
+        <div className="mb-4 text-center text-m">
+          Effective Date: 01/10/2024
+        </div>
+        <div className="text-4xl font-bold mb-4 text-black-800 text-center ">
+          Terms of Use
+        </div>
+        <br />
+        <div className="px-2 py-4 md:p-8 bg-gray-50">
+          <div>
             Welcome to EduSageAI (&quot;we&quot;, &quot;our&quot;, or
             &quot;us&quot;). By accessing or using our AI-based EdTech platform
             (the &quot;Platform&quot;), you agree to comply with and be bound by
@@ -319,4 +186,4 @@ function TermsAndConditionsPage() {
   );
 }
 
-export default TermsAndConditionsPage;
+export default TermsAndConditions;

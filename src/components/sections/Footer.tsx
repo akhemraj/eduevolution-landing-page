@@ -1,13 +1,19 @@
+"use client";
+
 import React from "react";
 import {
+  At,
   EnvelopeSimple,
   LinkedinLogo,
   MapPin,
 } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function Footer() {
+  const pathname = usePathname();
+
   return (
     <footer className="bg-blue-50">
       <div className="w-full px-5 lg:mx-auto lg:px-0 pt-12 max-w-screen-xl">
@@ -67,7 +73,7 @@ function Footer() {
                 Features
               </Link>
               <Link
-                href="/pricing"
+                href="/#Pricing"
                 className="text-sm font-semibold text-gray-800 hover:text-blue-600"
               >
                 Pricing
@@ -78,13 +84,13 @@ function Footer() {
                 Help
               </h5>
               <Link
-                href="/PrivacyPolicy"
+                href="/privacy-policy"
                 className="text-sm font-semibold text-gray-800 hover:text-blue-600"
               >
                 Privacy Policy
               </Link>
               <Link
-                href="/TermsAndConditionsSection"
+                href="/terms-and-conditions"
                 className="text-sm font-semibold text-gray-800 hover:text-blue-600"
               >
                 Terms & Conditions
@@ -100,13 +106,25 @@ function Footer() {
               <h5 className="text-gray-500 text-sm uppercase font-semibold mb-2 lg:mb-3">
                 Contact us
               </h5>
-              <div className="flex gap-2">
-                <MapPin size={20} color="#1F2A37" />
-                <p className="text-sm font-semibold text-gray-700 max-w-[250px]">
-                  Office 28, AB Ajinkya Apt, Lokmanyanagar, Pune - 411030,
-                  Maharashtra, India
-                </p>
+              <div className="flex gap-2 mb-1">
+                <At size={20} color="#1F2A37" />
+                <Link
+                  href="mailto:contact@edusageai.com"
+                  target="_blank"
+                  className="text-sm font-semibold text-gray-700 hover:text-blue-600"
+                >
+                  contact@edusageai.com
+                </Link>
               </div>
+              {pathname === "/about-us" && (
+                <div className="flex gap-2">
+                  <MapPin size={20} color="#1F2A37" />
+                  <p className="text-sm font-semibold text-gray-700 max-w-[250px]">
+                    Office 28, AB Ajinkya Apt, Lokmanyanagar, Pune - 411030,
+                    Maharashtra, India
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>

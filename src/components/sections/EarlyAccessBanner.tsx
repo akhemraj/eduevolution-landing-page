@@ -31,7 +31,7 @@ const EarlyAccessBanner = () => {
             placeholder="Enter your email"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
-            className="!p-0 placeholder:text-gray-500 text-sm lg:text-base border-none shadow-none focus-visible:ring-0"
+            className="!p-0 placeholder:text-gray-500 text-sm border-none shadow-none focus-visible:ring-0"
           />
           <Button
             variant="ghost"
