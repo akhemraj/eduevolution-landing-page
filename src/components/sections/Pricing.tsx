@@ -1,9 +1,49 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { Check, Tag } from "@phosphor-icons/react/dist/ssr";
 import SectionBadge from "../common/SectionBadge";
 import { Button } from "../ui/button";
 import { PRICING_PLANS } from "@/constants/pricings";
 
+const EXCHANGE_RATE = 83;
+
 const Pricing = () => {
+  const [isIndia, setIsIndia] = useState(false);
+
+  useEffect(() => {
+    const detectUserCountry = async () => {
+      const cachedCountry = localStorage.getItem("user_country");
+      if (cachedCountry) {
+        if (cachedCountry.toLowerCase() === "india") {
+          setIsIndia(true);
+        }
+        return;
+      }
+
+      try {
+        const res = await fetch("https://ipapi.co/json/");
+        const data = await res.json();
+        const country = data?.country_name;
+        if (country) {
+          localStorage.setItem("user_country", country);
+          if (country.toLowerCase() === "india") {
+            setIsIndia(true);
+          }
+        }
+      } catch (err) {
+        console.error("Failed to detect location", err);
+      }
+    };
+
+    detectUserCountry();
+  }, []);
+
+  const formatPrice = (usdPrice: string) => {
+    const numericValue = parseFloat(usdPrice.replace(/[^0-9.]/g, ""));
+    return isIndia ? `₹${Math.round(numericValue * EXCHANGE_RATE)}` : usdPrice;
+  };
+
   return (
     <div className="w-full py-20 pb-[100px] px-5 md:px-0" id="Pricing">
       <div className="flex flex-col items-center ">
@@ -45,13 +85,13 @@ const Pricing = () => {
                 {plan.description}
               </p>
             </div>
-            <div className="flex items-end">
-              <h2 className="text-gray-800 font-bold text-2xl">{plan.price}</h2>
-              {plan.priceNote && (
-                <span className="text-sm font-medium text-gray-700">
-                  {plan.priceNote}
-                </span>
-              )}
+            <div className="flex items-end space-x-1">
+              <h2 className="text-gray-800 font-bold text-2xl">
+                {plan.price !== "Custom Pricing" ? formatPrice(plan.price) : plan.price }
+              </h2>
+              <span className="text-sm font-medium text-gray-700">
+                {plan.priceNote}
+              </span>
             </div>
             <hr className="bg-gray-300" />
             <div className="flex flex-col space-y-3">
