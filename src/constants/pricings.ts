@@ -18,7 +18,7 @@ export const PRICING_PLANS = [
   {
     title: "Free Plan",
     price: "$0",
-    priceNote: "",
+    priceNote: "/user/month",
     description: "Perfect for small classes and individual tutors.",
     features: [
       "200 Evaluations per Month",
