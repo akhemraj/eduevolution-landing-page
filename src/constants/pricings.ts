@@ -30,6 +30,10 @@ export const PRICING_PLANS = [
       "Detailed Reports",
       "Google Classroom Integration",
     ],
+    missing: [
+      "Dedicated support/ account manager",
+      "Premium Support (Phone, Email, Chat)",
+    ],
   },
   {
     title: "Premium Plan",
@@ -48,6 +52,10 @@ export const PRICING_PLANS = [
       "Google Classroom Integration",
       "Dedicated Support (Email & Chat)",
       // "Monthly Usage Analytics",
+    ],
+    missing: [
+      "Dedicated account manager",
+      "Premium Support (Phone, Email, Chat)",
     ],
   },
   {
