@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Check, Tag, X } from "@phosphor-icons/react/dist/ssr";
 
 import SectionBadge from "../common/SectionBadge";
-import { Button } from "../ui/button";
+// import { Button } from "../ui/button";
 import { PRICING_PLANS } from "@/constants/pricings";
 
 const EXCHANGE_RATE = 83;
