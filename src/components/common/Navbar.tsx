@@ -63,19 +63,17 @@ const Navbar = () => {
             <div className="text-[15px] font-semibold flex items-center gap-5">
               <Link
                 className={cn(
-                  "text-gray-600 font-semibold hover:text-blue-600",
-                  !isHomePage && "hidden"
+                  "text-gray-600 font-semibold hover:text-blue-600"
                 )}
-                href="#CodeGrader"
+                href={isHomePage ? "#CodeGrader" : "/#CodeGrader"}
               >
                 Code Grader
               </Link>
               <Link
                 className={cn(
-                  "text-gray-600 font-semibold hover:text-blue-600",
-                  !isHomePage && "hidden"
+                  "text-gray-600 font-semibold hover:text-blue-600"
                 )}
-                href="#RubricGenerator"
+                href={isHomePage ? "#RubricGenerator" : "/#RubricGenerator"}
               >
                 Rubric Generator
               </Link>

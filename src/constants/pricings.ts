@@ -18,7 +18,7 @@ export const PRICING_PLANS = [
   {
     title: "Free Plan",
     price: "$0",
-    priceNote: "",
+    priceNote: "/user/month",
     description: "Perfect for small classes and individual tutors.",
     features: [
       "200 Evaluations per Month",
@@ -29,6 +29,10 @@ export const PRICING_PLANS = [
       "Advanced Rubric Generator",
       "Detailed Reports",
       "Google Classroom Integration",
+    ],
+    missing: [
+      "Dedicated support/ account manager",
+      "Premium Support (Phone, Email, Chat)",
     ],
   },
   {
@@ -48,6 +52,10 @@ export const PRICING_PLANS = [
       "Google Classroom Integration",
       "Dedicated Support (Email & Chat)",
       // "Monthly Usage Analytics",
+    ],
+    missing: [
+      "Dedicated account manager",
+      "Premium Support (Phone, Email, Chat)",
     ],
   },
   {
